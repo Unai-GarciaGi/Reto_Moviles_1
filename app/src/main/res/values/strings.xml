@@ -4,4 +4,5 @@
     <string name="nombre">Nombre</string>
     <string name="contrasena">Contraseña</string>
     <string name="errorContrasena">Ha habido un error en tu contraseña</string>
+    <string name="entradaCorrecta">Ha entrado correctamente</string>
 </resources>

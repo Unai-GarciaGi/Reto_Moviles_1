@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences preferences = getSharedPreferences("contrasena", Context.MODE_PRIVATE);
         String contrasenaPreferences = preferences.getString("contrasena", "");
         if(editContrasena.getText().toString().equals(contrasenaPreferences)) {
+            Toast.makeText(this,R.string.entradaCorrecta,Toast.LENGTH_LONG).show();
             Intent i = new Intent(this, PantallaPrincipal.class );
             startActivity(i);
         }else{
