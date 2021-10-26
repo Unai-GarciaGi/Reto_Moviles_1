@@ -3,6 +3,7 @@ package com.example.reto1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -28,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences preferences = getSharedPreferences("contrasena", Context.MODE_PRIVATE);
         String contrasenaPreferences = preferences.getString("contrasena", "");
         if(editContrasena.getText().toString().equals(contrasenaPreferences)) {
-            //Aqui entra a la siguiente pantalla
+            Intent i = new Intent(this, PantallaPrincipal.class );
+            startActivity(i);
         }else{
             Toast.makeText(this,R.string.errorContrasena,Toast.LENGTH_LONG).show();
         }
