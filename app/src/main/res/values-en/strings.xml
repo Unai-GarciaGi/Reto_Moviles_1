@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Reto1</string>
+    <string name="entrar">Enter</string>
+    <string name="nombre">Name</string>
+    <string name="contrasena">Password</string>
+</resources>
