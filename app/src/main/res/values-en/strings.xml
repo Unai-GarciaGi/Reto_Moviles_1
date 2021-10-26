@@ -4,4 +4,5 @@
     <string name="entrar">Enter</string>
     <string name="nombre">Name</string>
     <string name="contrasena">Password</string>
+    <string name="errorContrasena">There has been an error in the password</string>
 </resources>
