@@ -6,4 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".PantallaPrincipal">
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="413dp"
+        android:layout_height="186dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnNuevaTarea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nuevaTarea" />
+
+        <Button
+            android:id="@+id/btnListaTareas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/listaTareas" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtPantallaPrincipal"
+        android:layout_width="324dp"
+        android:layout_height="150dp"
+        android:text="@string/pantallaPrincipal"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

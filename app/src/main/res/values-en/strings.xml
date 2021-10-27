@@ -6,4 +6,7 @@
     <string name="contrasena">Password</string>
     <string name="errorContrasena">There has been an error in the password</string>
     <string name="entradaCorrecta">You entered correctly</string>
+    <string name="nuevaTarea">New Task</string>
+    <string name="listaTareas">Task list</string>
+    <string name="pantallaPrincipal">Main Menu</string>
 </resources>

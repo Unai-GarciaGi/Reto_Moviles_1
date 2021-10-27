@@ -5,4 +5,7 @@
     <string name="contrasena">Contraseña</string>
     <string name="errorContrasena">Ha habido un error en tu contraseña</string>
     <string name="entradaCorrecta">Ha entrado correctamente</string>
+    <string name="nuevaTarea">Nueva Tarea</string>
+    <string name="listaTareas">Lista de Tareas</string>
+    <string name="pantallaPrincipal">Pantalla Principal</string>
 </resources>
