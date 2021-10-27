@@ -20,12 +20,14 @@
             android:id="@+id/btnNuevaTarea"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="abrirNuevaTarea"
             android:text="@string/nuevaTarea" />
 
         <Button
             android:id="@+id/btnListaTareas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="listaTareas"
             android:text="@string/listaTareas" />
     </LinearLayout>
 
