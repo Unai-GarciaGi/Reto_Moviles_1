@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".PantallaContrasena">
 
     <LinearLayout
-        android:layout_width="412dp"
-        android:layout_height="233dp"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -16,27 +16,27 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/editNombre"
+            android:id="@+id/editPasswordAntigua"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="69dp"
             android:ems="10"
-            android:hint="@string/nombre"
-            android:inputType="textPersonName" />
+            android:hint="@string/introducirAntigua"
+            android:inputType="textPassword" />
 
         <EditText
-            android:id="@+id/editContrasena"
+            android:id="@+id/editPasswordNueva"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="69dp"
             android:ems="10"
-            android:hint="@string/contrasena"
+            android:hint="@string/introducirNueva"
             android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/btnEntrar"
+            android:id="@+id/btnCambiarContrasena"
             android:layout_width="match_parent"
-            android:layout_height="59dp"
-            android:onClick="clickBotonEntrar"
-            android:text="@string/entrar" />
+            android:layout_height="wrap_content"
+            android:onClick="cambiarContrasena"
+            android:text="@string/cambiarContrasena" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,4 +14,8 @@
     <string name="nombreApp">App Name:</string>
     <string name="versionApp">App Version:</string>
     <string name="appVersion">1.0</string>
+    <string name="introducirAntigua">Old Password</string>
+    <string name="introducirNueva">New Password</string>
+    <string name="contrasenaCambiada">Password Changed</string>
+    <string name="contrasenaNoCambiada">Old Password does not match</string>
 </resources>

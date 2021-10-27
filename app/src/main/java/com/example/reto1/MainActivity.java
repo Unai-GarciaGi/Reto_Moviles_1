@@ -26,9 +26,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickBotonEntrar(View view){
+        String usuario = editNombre.getText().toString();
         SharedPreferences preferences = getSharedPreferences("contrasena", Context.MODE_PRIVATE);
-        String contrasenaPreferences = preferences.getString("contrasena", "");
-        if(editContrasena.getText().toString().equals(contrasenaPreferences)) {
+        String contrasenaPreferences = preferences.getString("contrasena", "asdf");
+        if(editContrasena.getText().toString().equals(contrasenaPreferences) && usuario.equals("Usuario")) {
             Toast.makeText(this,R.string.entradaCorrecta,Toast.LENGTH_LONG).show();
             Intent i = new Intent(this, PantallaPrincipal.class );
             startActivity(i);

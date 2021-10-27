@@ -31,7 +31,7 @@ public class PantallaPrincipal extends AppCompatActivity {
             abOpciones.abNuevaTarea(this);
         }
         if (id==R.id.abContrasena) {
-            //abOpciones.abContrasena(this);
+            abOpciones.abContrasena(this);
         }
         if (id==R.id.abAcercaDe) {
             abOpciones.abAcercaDe(this);

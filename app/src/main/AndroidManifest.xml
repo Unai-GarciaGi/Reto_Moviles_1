@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Reto1">
         <activity
+            android:name=".PantallaContrasena"
+            android:exported="true" />
+        <activity
             android:name=".PantallaAcercaDe"
             android:exported="true" />
         <activity
