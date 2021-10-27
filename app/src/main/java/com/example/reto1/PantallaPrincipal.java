@@ -45,7 +45,7 @@ public class PantallaPrincipal extends AppCompatActivity {
     }
 
     public void listaTareas(View view){
-        //Intent i = new Intent(this, PantallaListaTareas.class );
-        //startActivity(i);
+        Intent i = new Intent(this, PantallaListaTareas.class );
+        startActivity(i);
     }
 }
