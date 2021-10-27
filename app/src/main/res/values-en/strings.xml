@@ -9,4 +9,6 @@
     <string name="nuevaTarea">New Task</string>
     <string name="listaTareas">Task list</string>
     <string name="pantallaPrincipal">Main Menu</string>
+    <string name="cambiarContrasena">Change Password</string>
+    <string name="acercaDe">About</string>
 </resources>

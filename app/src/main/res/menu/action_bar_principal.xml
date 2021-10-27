@@ -5,16 +5,16 @@
     <item
         android:id="@+id/abNuevaTarea"
         android:icon="@android:drawable/ic_input_add"
-        android:title="nuevaTarea"
+        android:title="@string/nuevaTarea"
         app:showAsAction="always" />
     <item
         android:id="@+id/abContrasena"
         android:icon="@android:drawable/ic_lock_idle_lock"
-        android:title="cambiarContrasena"
+        android:title="@string/cambiarContrasena"
         app:showAsAction="always" />
     <item
         android:id="@+id/abAcercaDe"
         android:icon="@android:drawable/ic_dialog_info"
-        android:title="acercaDe"
+        android:title="@string/acercaDe"
         app:showAsAction="always" />
 </menu>

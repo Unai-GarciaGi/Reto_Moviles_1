@@ -8,4 +8,6 @@
     <string name="nuevaTarea">Nueva Tarea</string>
     <string name="listaTareas">Lista de Tareas</string>
     <string name="pantallaPrincipal">Pantalla Principal</string>
+    <string name="cambiarContrasena">Cambiar Contraseña</string>
+    <string name="acercaDe">Acerca De</string>
 </resources>
