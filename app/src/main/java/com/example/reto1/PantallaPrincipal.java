@@ -34,7 +34,7 @@ public class PantallaPrincipal extends AppCompatActivity {
             //abOpciones.abContrasena(this);
         }
         if (id==R.id.abAcercaDe) {
-            //abOpciones.abAcercaDe(this);
+            abOpciones.abAcercaDe(this);
         }
         return super.onOptionsItemSelected(item);
     }

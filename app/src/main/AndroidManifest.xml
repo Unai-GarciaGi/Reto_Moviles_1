@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Reto1">
         <activity
+            android:name=".PantallaAcercaDe"
+            android:exported="true" />
+        <activity
             android:name=".PantallaNuevaTarea"
             android:exported="true" />
         <activity

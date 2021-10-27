@@ -16,11 +16,10 @@ public class ActionBarOpciones {
         Intent i = new Intent(contexto, PantallaContrasena.class);
         contexto.startActivity(i);
     }
-
+    */
     public void abAcercaDe(Context contexto){
         Intent i = new Intent(contexto, PantallaAcercaDe.class);
         contexto.startActivity(i);
     }
-    */
 
 }

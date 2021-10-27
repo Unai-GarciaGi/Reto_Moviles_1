@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Reto1</string>
+    <string name="app_name">Challenge 1</string>
     <string name="entrar">Enter</string>
     <string name="nombre">Name</string>
     <string name="contrasena">Password</string>
@@ -11,4 +11,7 @@
     <string name="pantallaPrincipal">Main Menu</string>
     <string name="cambiarContrasena">Change Password</string>
     <string name="acercaDe">About</string>
+    <string name="nombreApp">App Name:</string>
+    <string name="versionApp">App Version:</string>
+    <string name="appVersion">1.0</string>
 </resources>

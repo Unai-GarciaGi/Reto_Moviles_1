@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Reto1</string>
+    <string name="app_name">Reto 1</string>
     <string name="entrar">Entrar</string>
     <string name="nombre">Nombre</string>
     <string name="contrasena">Contraseña</string>
@@ -10,4 +10,7 @@
     <string name="pantallaPrincipal">Pantalla Principal</string>
     <string name="cambiarContrasena">Cambiar Contraseña</string>
     <string name="acercaDe">Acerca De</string>
+    <string name="nombreApp">Nombre de la App:</string>
+    <string name="versionApp">Version de la App:</string>
+    <string name="appVersion">1,0</string>
 </resources>
