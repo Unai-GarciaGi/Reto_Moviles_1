@@ -28,6 +28,7 @@
                 android:id="@+id/buttonRegistrar"
                 android:layout_width="212dp"
                 android:layout_height="wrap_content"
+                android:onClick="registrar"
                 android:text="@string/nuevaTareaRegistrar" />
 
             <Button

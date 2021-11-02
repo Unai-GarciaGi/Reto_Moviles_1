@@ -31,4 +31,5 @@
         <item>Medium</item>
         <item>Low</item>
     </string-array>
+    <string name="toastFechaIncorrecta">The date is incorrect, use dd/MM/yyyy</string>
 </resources>

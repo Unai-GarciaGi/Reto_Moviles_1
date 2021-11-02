@@ -30,4 +30,5 @@
         <item>Media</item>
         <item>Baja</item>
     </string-array>
+    <string name="toastFechaIncorrecta">La fecha es incorrecta, use el formato dd/MM/yyyy</string>
 </resources>
