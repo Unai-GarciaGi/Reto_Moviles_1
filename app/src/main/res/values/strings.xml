@@ -17,4 +17,17 @@
     <string name="introducirNueva">Contraseña nueva</string>
     <string name="contrasenaCambiada">Contraseña cambiada</string>
     <string name="contrasenaNoCambiada">La contraseña antigua no coincide</string>
+    <string name="nuevaTareaNombre">Nombre</string>
+    <string name="nuevaTareaDescripcion">Descripción</string>
+    <string name="nuevaTareaFecha">Fecha</string>
+    <string name="nuevaTareaPrioridad">Prioridad</string>
+    <string name="nuevaTareaCoste">Coste</string>
+    <string name="nuevaTareaRegistrar">Registrar</string>
+    <string name="nuevaTareaCancelar">Cancelar</string>
+    <string-array name="spinnerPrioridadDatos">
+        <item>Urgente</item>
+        <item>Alta</item>
+        <item>Media</item>
+        <item>Baja</item>
+    </string-array>
 </resources>
