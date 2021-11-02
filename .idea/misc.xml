@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Admin/Desktop/RetoMoviles/Reto_Moviles_1/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Admin/Desktop/RetoMoviles/Reto_Moviles_1/app/src/main/res/layout/activity_pantalla_nueva_tarea.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/in2dam/AndroidStudioProjects/Reto_Moviles/Reto_Moviles_1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/in2dam/AndroidStudioProjects/Reto_Moviles/Reto_Moviles_1/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/in2dam/AndroidStudioProjects/Reto_Moviles/Reto_Moviles_1/app/src/main/res/layout/activity_pantalla_acerca_de.xml" value="0.36666666666666664" />
@@ -14,7 +16,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" project-jdk-name="16" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

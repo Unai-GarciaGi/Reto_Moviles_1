@@ -11,18 +11,23 @@
         android:theme="@style/Theme.Reto1">
         <activity
             android:name=".PantallaListaTareas"
+            android:label="@string/listaTareas"
             android:exported="true" />
         <activity
             android:name=".PantallaContrasena"
+            android:label="@string/cambiarContrasena"
             android:exported="true" />
         <activity
             android:name=".PantallaAcercaDe"
+            android:label="@string/acercaDe"
             android:exported="true" />
         <activity
             android:name=".PantallaNuevaTarea"
+            android:label="@string/nuevaTarea"
             android:exported="true" />
         <activity
             android:name=".PantallaPrincipal"
+            android:label="@string/pantallaPrincipal"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
