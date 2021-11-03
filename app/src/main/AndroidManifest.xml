@@ -10,25 +10,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Reto1">
         <activity
+            android:name=".PantallaDetallesTarea"
+            android:exported="true"
+            android:label="@string/pantallaDetallesTarea" />
+        <activity
             android:name=".PantallaListaTareas"
-            android:label="@string/listaTareas"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/listaTareas" />
         <activity
             android:name=".PantallaContrasena"
-            android:label="@string/cambiarContrasena"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/cambiarContrasena" />
         <activity
             android:name=".PantallaAcercaDe"
-            android:label="@string/acercaDe"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/acercaDe" />
         <activity
             android:name=".PantallaNuevaTarea"
-            android:label="@string/nuevaTarea"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/nuevaTarea" />
         <activity
             android:name=".PantallaPrincipal"
-            android:label="@string/pantallaPrincipal"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/pantallaPrincipal" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

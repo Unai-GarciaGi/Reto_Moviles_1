@@ -33,4 +33,6 @@
     <string name="toastDatosGuardadosTarea">Se guardaron los datos de la tarea</string>
     <string name="toastFechaIncorrecta">La fecha es incorrecta, use el formato dd/MM/yyyy</string>
     <string name="toastCamposVacios">No se pueden dejar campos vacios</string>
+    <string name="pantallaDetallesTarea">Detalles Tarea</string>
+    <string name="tareaDetallesVolver">Volver</string>
 </resources>

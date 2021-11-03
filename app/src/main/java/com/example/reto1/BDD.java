@@ -14,7 +14,7 @@ public class BDD extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE tarea(codigo int primary key, nombre text, fecha date, coste int, prioridad text, realizada boolean)");
+        db.execSQL("CREATE TABLE tarea(nombre text primary key, descripcion text,fecha date, coste int, prioridad text, realizada boolean)");
     }
 
     @Override

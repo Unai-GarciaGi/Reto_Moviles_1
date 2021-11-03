@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/Admin/Desktop/RetoMoviles/Reto_Moviles_1/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/Admin/Desktop/RetoMoviles/Reto_Moviles_1/app/src/main/res/layout/activity_pantalla_contrasena.xml" value="0.26927083333333335" />
+        <entry key="..\:/Users/Admin/Desktop/RetoMoviles/Reto_Moviles_1/app/src/main/res/layout/activity_pantalla_detalles_tarea.xml" value="0.2671875" />
         <entry key="..\:/Users/Admin/Desktop/RetoMoviles/Reto_Moviles_1/app/src/main/res/layout/activity_pantalla_lista_tareas.xml" value="0.25" />
         <entry key="..\:/Users/Admin/Desktop/RetoMoviles/Reto_Moviles_1/app/src/main/res/layout/activity_pantalla_nueva_tarea.xml" value="0.25" />
         <entry key="..\:/Users/Admin/Desktop/RetoMoviles/Reto_Moviles_1/app/src/main/res/layout/activity_pantalla_principal.xml" value="0.2671875" />
@@ -19,7 +20,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="16" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="16" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

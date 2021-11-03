@@ -9,9 +9,15 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class PantallaListaTareas extends AppCompatActivity {
+
+    private EditText editTextNombre;
+    private EditText editTextDescripcion;
+    private EditText editTextFecha;
+    private EditText editTextCoste;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
