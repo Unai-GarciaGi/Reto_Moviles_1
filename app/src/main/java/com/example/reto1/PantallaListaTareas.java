@@ -9,20 +9,22 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class PantallaListaTareas extends AppCompatActivity {
 
-    private EditText editTextNombre;
-    private EditText editTextDescripcion;
-    private EditText editTextFecha;
-    private EditText editTextCoste;
+    private TextView textViewTareaGeneral;
+    private LinearLayout linearLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_lista_tareas);
+        //consultaBDD();
+        linearLayout = findViewById(R.id.llLista);
+
     }
 
     @Override
@@ -50,10 +52,12 @@ public class PantallaListaTareas extends AppCompatActivity {
     public void consultaBDD(View v) {
         BDD admin = new BDD(this, "administracion", null, 1);
         SQLiteDatabase bd = admin.getWritableDatabase();
-        Cursor fila = bd.rawQuery("select * from tarea" ,null);
+        Cursor fila = bd.rawQuery("select nombre from tarea" ,null);
         if (fila.moveToFirst()) {
-           // et2.setText(fila.getString(0));
-           // et3.setText(fila.getString(1));
+            while (fila.moveToNext()){
+                textViewTareaGeneral.setText(fila.getString(0));
+                linearLayout.addView(textViewTareaGeneral);
+            }
         } else
             Toast.makeText(this, "No existen datos en la BDD", Toast.LENGTH_SHORT).show();
         bd.close();
