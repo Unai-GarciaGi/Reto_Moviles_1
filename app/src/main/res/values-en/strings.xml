@@ -31,5 +31,7 @@
         <item>Medium</item>
         <item>Low</item>
     </string-array>
+    <string name="toastDatosGuardadosTarea">Task data was saved</string>
     <string name="toastFechaIncorrecta">The date is incorrect, use dd/MM/yyyy</string>
+    <string name="toastCamposVacios">You cannot leave empty fields</string>
 </resources>

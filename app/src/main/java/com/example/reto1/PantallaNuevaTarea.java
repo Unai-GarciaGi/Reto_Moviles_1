@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -63,6 +64,7 @@ public class PantallaNuevaTarea extends AppCompatActivity {
 
     public void registrar(View view) {
        String nombre = editTextNombre.getText().toString();
+       editTextNombre.setText(nombre);
        String descripcion = editTextDescripcion.getText().toString();
        String fecha = editTextFecha.getText().toString();
        String coste = editTextCoste.getText().toString();
@@ -73,9 +75,17 @@ public class PantallaNuevaTarea extends AppCompatActivity {
        Date fechaComprobada = comprobarFecha(fecha);
 
        if(fechaComprobada != null){
-            alta(nombre, descripcion, coste, fechaComprobada, prioridad);
+
+    if (!nombre.equals("")&& !descripcion.equals("") && !coste.equals("")) {
+        alta(nombre, descripcion, coste, fechaComprobada, prioridad);
+        Intent i = new Intent(this, PantallaPrincipal.class );
+        startActivity(i);
+    } else{
+        Toast.makeText(this,R.string.toastCamposVacios,Toast.LENGTH_LONG).show();
+    }
        }else{
            Toast.makeText(this,R.string.toastFechaIncorrecta,Toast.LENGTH_LONG).show();
+
        }
     }
 
@@ -92,8 +102,7 @@ public class PantallaNuevaTarea extends AppCompatActivity {
     }
 
     public void alta(String nombre, String descripcion, String coste, Date fecha, String prioridad) {
-        BDD admin = new BDD(this,
-                "administracion", null, 1);
+        BDD admin = new BDD(this, "administracion", null, 1);
         SQLiteDatabase bd = admin.getWritableDatabase();
 
         ContentValues registro = new ContentValues();
@@ -104,7 +113,7 @@ public class PantallaNuevaTarea extends AppCompatActivity {
         registro.put("coste",coste);
         bd.insert("tarea", null, registro);
         bd.close();
-        Toast.makeText(this, "Se cargaron los datos de la tarea",
-                Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.toastDatosGuardadosTarea, Toast.LENGTH_SHORT).show();
     }
+
 }
