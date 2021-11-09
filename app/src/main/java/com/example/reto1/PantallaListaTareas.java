@@ -3,6 +3,8 @@ package com.example.reto1;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -16,6 +18,7 @@ import android.widget.Toast;
 public class PantallaListaTareas extends AppCompatActivity {
 
     private LinearLayout linearLayout;
+    private Context esto = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,20 +56,32 @@ public class PantallaListaTareas extends AppCompatActivity {
         Cursor fila = bd.rawQuery("select nombre from tarea" ,null);
         if (fila.moveToFirst()) {
             TextView textViewTareaGeneral = new TextView(this);
-            textViewTareaGeneral.setHeight(100);
+            textViewTareaGeneral.setHeight(105);
             textViewTareaGeneral.setTextSize(32);
             textViewTareaGeneral.setText(fila.getString(0));
+            insertarOnClick(textViewTareaGeneral);
             linearLayout.addView(textViewTareaGeneral);
             while (fila.moveToNext()){
-                TextView textViewTareaGeneral2 = new TextView(this);
-                textViewTareaGeneral2.setHeight(100);
-                textViewTareaGeneral2.setTextSize(32);
-                textViewTareaGeneral2.setText(fila.getString(0));
-                linearLayout.addView(textViewTareaGeneral2);
+                textViewTareaGeneral = new TextView(this);
+                textViewTareaGeneral.setHeight(105);
+                textViewTareaGeneral.setTextSize(32);
+                textViewTareaGeneral.setText(fila.getString(0));
+                insertarOnClick(textViewTareaGeneral);
+                linearLayout.addView(textViewTareaGeneral);
             }
         } else
             Toast.makeText(this, "No existen datos en la BDD", Toast.LENGTH_SHORT).show();
         bd.close();
     }
 
-}
+    public void insertarOnClick(TextView tv){
+            tv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent i=new Intent(esto,PantallaDetallesTarea.class);
+                    i.putExtra("nombre", tv.getText().toString());
+                    startActivity(i);
+                }
+            });
+        }
+    }

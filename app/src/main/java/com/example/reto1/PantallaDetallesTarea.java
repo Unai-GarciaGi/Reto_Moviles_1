@@ -27,22 +27,27 @@ public class PantallaDetallesTarea extends AppCompatActivity {
         textViewFechaTarea = findViewById(R.id.textViewFechaTarea);
         textViewPrioridadTarea = findViewById(R.id.textViewPrioridadTarea);
         textViewCosteTarea = findViewById(R.id.textViewCosteTarea);
+
+        consultaBDD();
     }
 
-    public void consultaBDD(View v) {
+    public void consultaBDD() {
         BDD admin = new BDD(this, "administracion", null, 1);
         SQLiteDatabase bd = admin.getWritableDatabase();
         Cursor fila = bd.rawQuery("select * from tarea" ,null);
         Bundle bundle = getIntent().getExtras();
         String dato = bundle.getString("nombre");
         if (fila.moveToFirst()) {
-            if (fila.getString(0).equals(dato)){
-
-                textViewDescripcionTarea.setText(fila.getString(1));
-                textViewFechaTarea.setText(fila.getString(2));
-                textViewPrioridadTarea.setText(fila.getString(3));
-                textViewCosteTarea.setText(fila.getString(4));
-            }
+            do{
+                if (fila.getString(0).equals(dato)){
+                    textViewNombreTarea.setText(fila.getString(0));
+                    textViewDescripcionTarea.setText(fila.getString(1));
+                    String[] fecha = fila.getString(2).split(" ");
+                    textViewFechaTarea.setText(fecha[0] + " " + fecha[2] +  " " + fecha[1] + " " + fecha[5]);
+                    textViewPrioridadTarea.setText(fila.getString(3));
+                    textViewCosteTarea.setText(fila.getString(4));
+                }
+            }while(fila.moveToNext());
         } else
             Toast.makeText(this, "No existen datos en la BDD", Toast.LENGTH_SHORT).show();
         bd.close();
