@@ -33,8 +33,10 @@ public class PantallaDetallesTarea extends AppCompatActivity {
         BDD admin = new BDD(this, "administracion", null, 1);
         SQLiteDatabase bd = admin.getWritableDatabase();
         Cursor fila = bd.rawQuery("select * from tarea" ,null);
+        Bundle bundle = getIntent().getExtras();
+        String dato = bundle.getString("nombre");
         if (fila.moveToFirst()) {
-            if (fila.getString(0).equals(textViewNombreTarea.getText().toString())){
+            if (fila.getString(0).equals(dato)){
 
                 textViewDescripcionTarea.setText(fila.getString(1));
                 textViewFechaTarea.setText(fila.getString(2));
