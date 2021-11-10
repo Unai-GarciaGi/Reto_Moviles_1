@@ -8,9 +8,12 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,6 +22,7 @@ public class PantallaListaTareas extends AppCompatActivity {
 
     private LinearLayout linearLayout;
     private Context esto = this;
+    private String nombre;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +36,35 @@ public class PantallaListaTareas extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.action_bar_principal, menu);
         return true;
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu,
+                                    View v, ContextMenu.ContextMenuInfo menuInfo)
+    {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        menu.setHeaderTitle("Elige una opcion:");
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_mantener_pulsado, menu);
+        TextView tv = (TextView) v;
+        nombre = tv.getText().toString();
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+        switch(item.getItemId()) {
+            case R.id.modificar:
+                // add stuff here
+                return true;
+            case R.id.borrar:
+
+                consultaBDDBorrado(nombre);
+
+                return true;
+            default:
+                return super.onContextItemSelected(item);
+        }
     }
 
     @Override
@@ -83,5 +116,19 @@ public class PantallaListaTareas extends AppCompatActivity {
                     startActivity(i);
                 }
             });
+            registerForContextMenu(tv);
         }
+
+    public void consultaBDDBorrado(String texto) {
+        BDD admin = new BDD(this, "administracion", null, 1);
+        SQLiteDatabase bd = admin.getWritableDatabase();
+
+        String sql = "delete from tarea where nombre = "  + "\'" + texto + "\'";
+        bd.execSQL(sql);
+        bd.close();
+
+        finish();
+        startActivity(getIntent());
+    }
+
     }

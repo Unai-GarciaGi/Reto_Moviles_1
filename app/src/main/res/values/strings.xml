@@ -35,4 +35,6 @@
     <string name="toastCamposVacios">No se pueden dejar campos vacios</string>
     <string name="pantallaDetallesTarea">Detalles Tarea</string>
     <string name="tareaDetallesVolver">Volver</string>
+    <string name="mantenerTextoModificar">Modificar</string>
+    <string name="mantenerTextoBorrar">Borrar</string>
 </resources>

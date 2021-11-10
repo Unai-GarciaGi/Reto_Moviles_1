@@ -36,4 +36,6 @@
     <string name="toastCamposVacios">You cannot leave empty fields</string>
     <string name="pantallaDetallesTarea">Task Details</string>
     <string name="tareaDetallesVolver">Back</string>
+    <string name="mantenerTextoModificar">Modify</string>
+    <string name="mantenerTextoBorrar">Delete</string>
 </resources>
