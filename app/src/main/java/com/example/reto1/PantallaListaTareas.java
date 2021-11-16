@@ -57,7 +57,10 @@ public class PantallaListaTareas extends AppCompatActivity {
         AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
         switch(item.getItemId()) {
             case R.id.modificar:
-                // add stuff here
+                Intent i = new Intent(esto, PantallaNuevaTarea.class);
+                i.putExtra("modificar", true);
+                i.putExtra("nombre", nombre);
+                esto.startActivity(i);
                 return true;
             case R.id.borrar:
 

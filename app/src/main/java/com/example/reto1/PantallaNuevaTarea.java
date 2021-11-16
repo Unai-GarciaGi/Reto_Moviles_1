@@ -7,6 +7,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
@@ -27,6 +28,8 @@ public class PantallaNuevaTarea extends AppCompatActivity {
     private EditText editTextDescripcion;
     private EditText editTextFecha;
     private EditText editTextCoste;
+    private Spinner spinnerPrioridadTarea;
+    private Context esto = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,36 @@ public class PantallaNuevaTarea extends AppCompatActivity {
         editTextDescripcion = findViewById(R.id.editTextDescripcion);
         editTextFecha = findViewById(R.id.editTextFecha);
         editTextCoste = findViewById(R.id.editTextCoste);
+        spinnerPrioridadTarea = findViewById(R.id.spinnerPrioridad);
+
+        Bundle bundle = getIntent().getExtras();
+        if(bundle.getBoolean("modificar")){
+            String nombre = bundle.getString("nombre");
+            BDD admin = new BDD(this, "administracion", null, 1);
+            SQLiteDatabase bd = admin.getWritableDatabase();
+            Cursor fila = bd.rawQuery("select * from tarea" ,null);
+            if (fila.moveToFirst()) {
+                do {
+                    if (fila.getString(0).equals(nombre)) {
+                        editTextNombre.setText(fila.getString(0));
+                        editTextDescripcion.setText(fila.getString(1));
+                        String[] fecha = fila.getString(2).split(" ");
+                        editTextFecha.setText(fecha[0] + " " + fecha[2] + " " + fecha[1] + " " + fecha[5]);
+                        String prioridad = (fila.getString(4));
+                        if (prioridad.equalsIgnoreCase("urgente")) {
+                            spinnerPrioridadTarea.setSelection(0);
+                        } else if (prioridad.equalsIgnoreCase("alta")) {
+                            spinnerPrioridadTarea.setSelection(1);
+                        } else if (prioridad.equalsIgnoreCase("media")) {
+                            spinnerPrioridadTarea.setSelection(2);
+                        } else if (prioridad.equalsIgnoreCase("baja")) {
+                            spinnerPrioridadTarea.setSelection(3);
+                        }
+                        editTextCoste.setText(fila.getString(3));
+                    }
+                } while (fila.moveToNext());
+            }
+        }
     }
 
     @Override
@@ -73,7 +106,22 @@ public class PantallaNuevaTarea extends AppCompatActivity {
        String coste = editTextCoste.getText().toString();
 
        Spinner spinnerPrioridadDatos = findViewById(R.id.spinnerPrioridad);
-       String prioridad = spinnerPrioridadDatos.getSelectedItem().toString();
+       int posSpin = spinnerPrioridadDatos.getSelectedItemPosition();
+       String prioridad = "";
+       switch(posSpin){
+           case 0:
+               prioridad = "Urgente";
+               break;
+           case 1:
+               prioridad = "Alta";
+               break;
+           case 2:
+               prioridad = "Media";
+               break;
+           case 3:
+               prioridad = "Baja";
+               break;
+       }
 
        Date fechaComprobada = comprobarFecha(fecha);
 
@@ -107,6 +155,8 @@ public class PantallaNuevaTarea extends AppCompatActivity {
     public void alta(String nombre, String descripcion, String coste, Date fecha, String prioridad) {
         BDD admin = new BDD(this, "administracion", null, 1);
         SQLiteDatabase bd = admin.getWritableDatabase();
+        Bundle bundle = getIntent().getExtras();
+        String nombres[] = {bundle.getString("nombre")};
 
         ContentValues registro = new ContentValues();
         registro.put("nombre", nombre);
@@ -114,8 +164,13 @@ public class PantallaNuevaTarea extends AppCompatActivity {
         registro.put("fecha", String.valueOf(fecha));
         registro.put("prioridad", prioridad);
         registro.put("coste",coste);
-        registro.put("realizada", false);
-        bd.insert("tarea", null, registro);
+
+        if(bundle.getBoolean("modificar")){
+            bd.update("tarea", registro, "nombre = ?", nombres);
+        }else{
+            registro.put("realizada", false);
+            bd.insert("tarea", null, registro);
+        }
         bd.close();
         Toast.makeText(this, R.string.toastDatosGuardadosTarea, Toast.LENGTH_SHORT).show();
     }

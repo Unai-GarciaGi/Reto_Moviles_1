@@ -9,6 +9,7 @@ public class ActionBarOpciones {
 
     public void abNuevaTarea(Context contexto){
         Intent i = new Intent(contexto, PantallaNuevaTarea.class);
+        i.putExtra("modificar", false);
         contexto.startActivity(i);
     }
 

@@ -41,6 +41,7 @@ public class PantallaPrincipal extends AppCompatActivity {
 
     public void abrirNuevaTarea(View view){
         Intent i = new Intent(this, PantallaNuevaTarea.class );
+        i.putExtra("modificar", false);
         startActivity(i);
     }
 
