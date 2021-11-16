@@ -7,12 +7,14 @@
     tools:context=".PantallaListaTareas">
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="545dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="69dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -22,4 +24,29 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" />
     </ScrollView>
+
+    <Button
+        android:id="@+id/btnHechas"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="60dp"
+        android:onClick="mostrarHechas"
+        android:text="@string/hechas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnPendientes"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="60dp"
+        android:onClick="mostrarPendientes"
+        android:text="@string/pendientes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btnHechas" />
 </androidx.constraintlayout.widget.ConstraintLayout>

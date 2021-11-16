@@ -37,4 +37,6 @@
     <string name="tareaDetallesVolver">Volver</string>
     <string name="mantenerTextoModificar">Modificar</string>
     <string name="mantenerTextoBorrar">Borrar</string>
+    <string name="hechas">Hechas</string>
+    <string name="pendientes">Pendientes</string>
 </resources>

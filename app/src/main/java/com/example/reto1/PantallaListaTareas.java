@@ -134,4 +134,56 @@ public class PantallaListaTareas extends AppCompatActivity {
         startActivity(getIntent());
     }
 
+    public void mostrarHechas(View view){
+        //TODO
+        linearLayout.removeAllViews();
+        BDD admin = new BDD(this, "administracion", null, 1);
+        SQLiteDatabase bd = admin.getWritableDatabase();
+        Cursor fila = bd.rawQuery("select nombre from tarea where realizada = true" ,null);
+        if (fila.moveToFirst()) {
+            TextView textViewTareaGeneral = new TextView(this);
+            textViewTareaGeneral.setHeight(105);
+            textViewTareaGeneral.setTextSize(32);
+            textViewTareaGeneral.setText(fila.getString(0));
+            insertarOnClick(textViewTareaGeneral);
+            linearLayout.addView(textViewTareaGeneral);
+            while (fila.moveToNext()){
+                textViewTareaGeneral = new TextView(this);
+                textViewTareaGeneral.setHeight(105);
+                textViewTareaGeneral.setTextSize(32);
+                textViewTareaGeneral.setText(fila.getString(0));
+                insertarOnClick(textViewTareaGeneral);
+                linearLayout.addView(textViewTareaGeneral);
+            }
+        } else
+            Toast.makeText(this, "No existen datos en la BDD", Toast.LENGTH_SHORT).show();
+        bd.close();
+    }
+
+    public void mostrarPendientes(View view){
+        //TODO
+        linearLayout.removeAllViews();
+        BDD admin = new BDD(this, "administracion", null, 1);
+        SQLiteDatabase bd = admin.getWritableDatabase();
+        Cursor fila = bd.rawQuery("select nombre from tarea where realizada = false" ,null);
+        if (fila.moveToFirst()) {
+            TextView textViewTareaGeneral = new TextView(this);
+            textViewTareaGeneral.setHeight(105);
+            textViewTareaGeneral.setTextSize(32);
+            textViewTareaGeneral.setText(fila.getString(0));
+            insertarOnClick(textViewTareaGeneral);
+            linearLayout.addView(textViewTareaGeneral);
+            while (fila.moveToNext()){
+                textViewTareaGeneral = new TextView(this);
+                textViewTareaGeneral.setHeight(105);
+                textViewTareaGeneral.setTextSize(32);
+                textViewTareaGeneral.setText(fila.getString(0));
+                insertarOnClick(textViewTareaGeneral);
+                linearLayout.addView(textViewTareaGeneral);
+            }
+        } else
+            Toast.makeText(this, "No existen datos en la BDD", Toast.LENGTH_SHORT).show();
+        bd.close();
+    }
+
     }

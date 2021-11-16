@@ -114,6 +114,7 @@ public class PantallaNuevaTarea extends AppCompatActivity {
         registro.put("fecha", String.valueOf(fecha));
         registro.put("prioridad", prioridad);
         registro.put("coste",coste);
+        registro.put("realizada", false);
         bd.insert("tarea", null, registro);
         bd.close();
         Toast.makeText(this, R.string.toastDatosGuardadosTarea, Toast.LENGTH_SHORT).show();

@@ -38,4 +38,6 @@
     <string name="tareaDetallesVolver">Back</string>
     <string name="mantenerTextoModificar">Modify</string>
     <string name="mantenerTextoBorrar">Delete</string>
+    <string name="hechas">Done</string>
+    <string name="pendientes">Pending</string>
 </resources>
