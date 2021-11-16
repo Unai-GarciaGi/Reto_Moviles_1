@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -72,9 +73,23 @@ public class PantallaDetallesTarea extends AppCompatActivity {
                     textViewNombreTarea.setText(fila.getString(0));
                     textViewDescripcionTarea.setText(fila.getString(1));
                     String[] fecha = fila.getString(2).split(" ");
-                    textViewFechaTarea.setText(fecha[0] + " " + fecha[2] +  " " + fecha[1] + " " + fecha[5]);
-                    textViewPrioridadTarea.setText(fila.getString(3));
-                    textViewCosteTarea.setText(fila.getString(4));
+                    textViewFechaTarea.setText("Para el: " + fecha[0] + " " + fecha[2] +  " " + fecha[1] + " " + fecha[5]);
+                    String prioridad = fila.getString(4);
+                    textViewPrioridadTarea.setText("Prioridad: " + prioridad);
+                    if(prioridad.equalsIgnoreCase("urgente")){
+                        textViewPrioridadTarea.setTextColor(Color.RED);
+                    }
+                    else if(prioridad.equalsIgnoreCase("alta")){
+                        textViewPrioridadTarea.setTextColor(Color.rgb(255,165,0));
+                    }
+                    else if(prioridad.equalsIgnoreCase("media")){
+                        textViewPrioridadTarea.setTextColor(Color.YELLOW);
+                        textViewPrioridadTarea.setBackgroundColor(Color.BLACK);
+                    }
+                    else if(prioridad.equalsIgnoreCase("baja")){
+                        textViewPrioridadTarea.setTextColor(Color.GREEN);
+                    }
+                    textViewCosteTarea.setText("Se necesita:\n" +fila.getString(3));
                 }
             }while(fila.moveToNext());
         } else
