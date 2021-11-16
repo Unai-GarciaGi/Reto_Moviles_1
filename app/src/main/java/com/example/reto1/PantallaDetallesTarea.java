@@ -3,6 +3,7 @@ package com.example.reto1;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -81,7 +82,16 @@ public class PantallaDetallesTarea extends AppCompatActivity {
         bd.close();
     }
 
-
+    public void realizada(View view){
+        String nombre = textViewNombreTarea.getText().toString();
+        String nombres[] = {nombre};
+        BDD admin = new BDD(this, "administracion", null, 1);
+        SQLiteDatabase bd = admin.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put("realizada",true);
+        bd.update("tarea", cv, "nombre = ?", nombres);
+        bd.close();
+    }
 
     public void volver(View view) {
         finish();
