@@ -55,6 +55,9 @@ public class PantallaNuevaTarea extends AppCompatActivity {
         if (id == R.id.abAcercaDe) {
             abOpciones.abAcercaDe(this);
         }
+        if(id == R.id.abHome){
+            abOpciones.abHome(this);
+        }
         return super.onOptionsItemSelected(item);
     }
 

@@ -32,6 +32,9 @@ public class PantallaAcercaDe extends AppCompatActivity {
         if (id==R.id.abContrasena) {
             abOpciones.abContrasena(this);
         }
+        if(id == R.id.abHome){
+            abOpciones.abHome(this);
+        }
         return super.onOptionsItemSelected(item);
     }
 }

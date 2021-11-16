@@ -17,4 +17,9 @@
         android:icon="@android:drawable/ic_dialog_info"
         android:title="@string/acercaDe"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/abHome"
+        android:icon="@drawable/ic_home"
+        android:title="@string/pantallaPrincipal"
+        app:showAsAction="always" />
 </menu>

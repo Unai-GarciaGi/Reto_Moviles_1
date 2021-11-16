@@ -22,4 +22,9 @@ public class ActionBarOpciones {
         contexto.startActivity(i);
     }
 
+    public void abHome(Context contexto){
+        Intent i = new Intent(contexto, PantallaPrincipal.class);
+        contexto.startActivity(i);
+    }
+
 }
