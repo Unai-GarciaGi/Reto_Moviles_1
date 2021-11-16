@@ -39,4 +39,8 @@
     <string name="mantenerTextoBorrar">Borrar</string>
     <string name="hechas">Hechas</string>
     <string name="pendientes">Pendientes</string>
+    <string name="ok">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="alertTitle">Borrar Tarea</string>
+    <string name="alertMessage">¿Quieres borrar la tarea?</string>
 </resources>

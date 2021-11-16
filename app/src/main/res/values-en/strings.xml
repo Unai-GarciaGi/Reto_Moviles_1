@@ -40,4 +40,8 @@
     <string name="mantenerTextoBorrar">Delete</string>
     <string name="hechas">Done</string>
     <string name="pendientes">Pending</string>
+    <string name="ok">Accept</string>
+    <string name="cancel">Cancel</string>
+    <string name="alertTitle">Delete Task</string>
+    <string name="alertMessage">Do you want to delete the task?</string>
 </resources>

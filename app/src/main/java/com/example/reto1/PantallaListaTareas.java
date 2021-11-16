@@ -3,7 +3,9 @@ package com.example.reto1;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -59,7 +61,26 @@ public class PantallaListaTareas extends AppCompatActivity {
                 return true;
             case R.id.borrar:
 
-                consultaBDDBorrado(nombre);
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle(R.string.alertTitle);
+                builder.setMessage(R.string.alertMessage);
+                builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        consultaBDDBorrado(nombre);
+                        Toast.makeText(esto, "Se ha borrado la tarea", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id){
+                        Toast.makeText(esto, "Has cancelado el borrado", Toast.LENGTH_SHORT).show();
+                        dialog.cancel();
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                dialog.show();
+
+
 
                 return true;
             default:
@@ -135,7 +156,6 @@ public class PantallaListaTareas extends AppCompatActivity {
     }
 
     public void mostrarHechas(View view){
-        //TODO
         linearLayout.removeAllViews();
         BDD admin = new BDD(this, "administracion", null, 1);
         SQLiteDatabase bd = admin.getWritableDatabase();
@@ -161,7 +181,6 @@ public class PantallaListaTareas extends AppCompatActivity {
     }
 
     public void mostrarPendientes(View view){
-        //TODO
         linearLayout.removeAllViews();
         BDD admin = new BDD(this, "administracion", null, 1);
         SQLiteDatabase bd = admin.getWritableDatabase();
