@@ -19,7 +19,7 @@
         app:showAsAction="always" />
     <item
         android:id="@+id/abHome"
-        android:icon="@drawable/ic_home"
+        android:icon="@mipmap/ic_channel_casita"
         android:title="@string/pantallaPrincipal"
         app:showAsAction="always" />
 </menu>

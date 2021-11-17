@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -36,5 +37,12 @@ public class PantallaAcercaDe extends AppCompatActivity {
             abOpciones.abHome(this);
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void irElorrieta(View arg0)
+    {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.google.com/maps/place/CIFP+Elorrieta+Erreka+Mari+LHII/@43.2845875,-2.9647328,15z/data=!4m5!3m4!1s0x0:0xec69922dea02910b!8m2!3d43.2845875!4d-2.9647328"));
+        startActivity(browserIntent);
+
     }
 }

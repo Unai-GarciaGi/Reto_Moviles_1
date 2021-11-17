@@ -107,6 +107,7 @@
         android:layout_height="121dp"
         android:layout_marginBottom="100dp"
         android:background="@mipmap/ic_banner_foreground"
+        android:onClick="irElorrieta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
