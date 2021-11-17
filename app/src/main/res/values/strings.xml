@@ -56,4 +56,6 @@
     <string name="canceladoBorrado">Has cancelado el borrado</string>
     <string name="fechaVersionApp">Fecha de la versión:</string>
     <string name="correoContacto">Correo:"</string>
+    <string name="toastFiltrarHechas">Se han filtrado por tareas hechas</string>
+    <string name="toastFiltrarPendientes">Se han filtrado por tareas pendientes</string>
 </resources>

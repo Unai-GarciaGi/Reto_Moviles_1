@@ -178,6 +178,7 @@ public class PantallaListaTareas extends AppCompatActivity {
                 insertarOnClick(textViewTareaGeneral);
                 linearLayout.addView(textViewTareaGeneral);
             }
+            Toast.makeText(this, R.string.toastFiltrarHechas, Toast.LENGTH_SHORT).show();
         } else
             Toast.makeText(this, R.string.toastNoExiste, Toast.LENGTH_SHORT).show();
         bd.close();
@@ -203,6 +204,7 @@ public class PantallaListaTareas extends AppCompatActivity {
                 insertarOnClick(textViewTareaGeneral);
                 linearLayout.addView(textViewTareaGeneral);
             }
+            Toast.makeText(this, R.string.toastFiltrarPendientes, Toast.LENGTH_SHORT).show();
         } else
             Toast.makeText(this, R.string.toastNoExiste, Toast.LENGTH_SHORT).show();
         bd.close();
