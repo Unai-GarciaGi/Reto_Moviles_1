@@ -52,6 +52,8 @@
     <string name="seNecesita">Se necesita: </string>
     <string name="toastNoExiste">No existen datos en la BDD</string>
     <string name="eligeOpcion">Elige una opcion:</string>
-    <string name="borradoTarea">"Se ha borrado la tarea"</string>
-    <string name="canceladoBorrado">"Has cancelado el borrado"</string>
+    <string name="borradoTarea">Se ha borrado la tarea</string>
+    <string name="canceladoBorrado">Has cancelado el borrado</string>
+    <string name="fechaVersionApp">Fecha de la versión:</string>
+    <string name="correoContacto">Correo:"</string>
 </resources>

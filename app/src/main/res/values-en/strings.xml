@@ -53,6 +53,8 @@
     <string name="seNecesita">Need: </string>
     <string name="toastNoExiste">No data in BDD</string>
     <string name="eligeOpcion">Choose an option:</string>
-    <string name="borradoTarea">"The task has been eliminated"</string>
-    <string name="canceladoBorrado">"You cancel the erased"</string>
+    <string name="borradoTarea">The task has been eliminated</string>
+    <string name="canceladoBorrado">You cancel the erased</string>
+    <string name="fechaVersionApp">Version date:"</string>
+    <string name="correoContacto">Email:"</string>
 </resources>
