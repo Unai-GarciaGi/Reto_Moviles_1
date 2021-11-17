@@ -45,7 +45,7 @@ public class PantallaListaTareas extends AppCompatActivity {
                                     View v, ContextMenu.ContextMenuInfo menuInfo)
     {
         super.onCreateContextMenu(menu, v, menuInfo);
-        menu.setHeaderTitle("Elige una opcion:");
+        menu.setHeaderTitle(R.string.eligeOpcion);
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_mantener_pulsado, menu);
         TextView tv = (TextView) v;
@@ -71,12 +71,12 @@ public class PantallaListaTareas extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         consultaBDDBorrado(nombre);
-                        Toast.makeText(esto, "Se ha borrado la tarea", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(esto, R.string.borradoTarea, Toast.LENGTH_SHORT).show();
                     }
                 });
                 builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id){
-                        Toast.makeText(esto, "Has cancelado el borrado", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(esto, R.string.canceladoBorrado, Toast.LENGTH_SHORT).show();
                         dialog.cancel();
                     }
                 });
@@ -130,7 +130,7 @@ public class PantallaListaTareas extends AppCompatActivity {
                 linearLayout.addView(textViewTareaGeneral);
             }
         } else
-            Toast.makeText(this, "No existen datos en la BDD", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.toastNoExiste, Toast.LENGTH_SHORT).show();
         bd.close();
     }
 
@@ -179,7 +179,7 @@ public class PantallaListaTareas extends AppCompatActivity {
                 linearLayout.addView(textViewTareaGeneral);
             }
         } else
-            Toast.makeText(this, "No existen datos en la BDD", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.toastNoExiste, Toast.LENGTH_SHORT).show();
         bd.close();
     }
 
@@ -204,7 +204,7 @@ public class PantallaListaTareas extends AppCompatActivity {
                 linearLayout.addView(textViewTareaGeneral);
             }
         } else
-            Toast.makeText(this, "No existen datos en la BDD", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.toastNoExiste, Toast.LENGTH_SHORT).show();
         bd.close();
     }
 

@@ -73,27 +73,31 @@ public class PantallaDetallesTarea extends AppCompatActivity {
                     textViewNombreTarea.setText(fila.getString(0));
                     textViewDescripcionTarea.setText(fila.getString(1));
                     String[] fecha = fila.getString(2).split(" ");
-                    textViewFechaTarea.setText("Para el: " + fecha[0] + " " + fecha[2] +  " " + fecha[1] + " " + fecha[5]);
+                    textViewFechaTarea.setText(getString(R.string.paraEl)+" " + fecha[0] + " " + fecha[2] +  " " + fecha[1] + " " + fecha[5]);
                     String prioridad = fila.getString(4);
-                    textViewPrioridadTarea.setText("Prioridad: " + prioridad);
                     if(prioridad.equalsIgnoreCase("urgente")){
                         textViewPrioridadTarea.setTextColor(Color.RED);
+                        prioridad = getString(R.string.urgente);
                     }
                     else if(prioridad.equalsIgnoreCase("alta")){
                         textViewPrioridadTarea.setTextColor(Color.rgb(255,165,0));
+                        prioridad = getString(R.string.alta);
                     }
                     else if(prioridad.equalsIgnoreCase("media")){
                         textViewPrioridadTarea.setTextColor(Color.YELLOW);
                         textViewPrioridadTarea.setBackgroundColor(Color.BLACK);
+                        prioridad = getString(R.string.media);
                     }
                     else if(prioridad.equalsIgnoreCase("baja")){
                         textViewPrioridadTarea.setTextColor(Color.GREEN);
+                        prioridad = getString(R.string.baja);
                     }
-                    textViewCosteTarea.setText("Se necesita:\n" +fila.getString(3));
+                    textViewPrioridadTarea.setText(getString(R.string.nuevaTareaPrioridad)+" " + prioridad);
+                    textViewCosteTarea.setText(getString(R.string.seNecesita)+"\n" +fila.getString(3));
                 }
             }while(fila.moveToNext());
         } else
-            Toast.makeText(this, "No existen datos en la BDD", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.toastNoExiste, Toast.LENGTH_SHORT).show();
         bd.close();
     }
 

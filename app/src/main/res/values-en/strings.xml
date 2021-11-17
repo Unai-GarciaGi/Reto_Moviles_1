@@ -45,4 +45,14 @@
     <string name="alertTitle">Delete Task</string>
     <string name="alertMessage">Do you want to delete the task?</string>
     <string name="realizada">Done</string>
+    <string name="urgente">Urgent</string>
+    <string name="alta">High</string>
+    <string name="media">Medium</string>
+    <string name="baja">Low</string>
+    <string name="paraEl">Day: </string>
+    <string name="seNecesita">Need: </string>
+    <string name="toastNoExiste">No data in BDD</string>
+    <string name="eligeOpcion">Choose an option:</string>
+    <string name="borradoTarea">"The task has been eliminated"</string>
+    <string name="canceladoBorrado">"You cancel the erased"</string>
 </resources>

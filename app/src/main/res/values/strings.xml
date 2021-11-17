@@ -44,4 +44,14 @@
     <string name="alertTitle">Borrar Tarea</string>
     <string name="alertMessage">¿Quieres borrar la tarea?</string>
     <string name="realizada">Realizada</string>
+    <string name="urgente">Urgente</string>
+    <string name="alta">Alta</string>
+    <string name="media">Media</string>
+    <string name="baja">Baja</string>
+    <string name="paraEl">Para el: </string>
+    <string name="seNecesita">Se necesita: </string>
+    <string name="toastNoExiste">No existen datos en la BDD</string>
+    <string name="eligeOpcion">Elige una opcion:</string>
+    <string name="borradoTarea">"Se ha borrado la tarea"</string>
+    <string name="canceladoBorrado">"Has cancelado el borrado"</string>
 </resources>
